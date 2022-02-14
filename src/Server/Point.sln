@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{E206AB3C-BFC3-4303-B6B0-CEB1311ED9AB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.SharedKernel", "Point.SharedKernel\Point.SharedKernel.csproj", "{4C1520BB-0DB0-403B-923F-C050EBDDDFD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Point.External.Api", "Point.External\Point.External.Api\Point.External.Api.csproj", "{F22D7C3D-26F4-4500-91E4-126A088AEB7F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Point.External", "Point.External", "{03A17BAC-1AA6-40DB-B379-96A881932776}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Point.External.Core", "Point.External\Point.External.Core\Point.External.Core.csproj", "{0F8FCE7C-93E0-46BF-9933-785E48953725}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Point.External.Infrastructure", "Point.External\Point.External.Infrastructure\Point.External.Infrastructure.csproj", "{0CA1EC88-1913-414D-B8B6-35103A91C3DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4C1520BB-0DB0-403B-923F-C050EBDDDFD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C1520BB-0DB0-403B-923F-C050EBDDDFD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C1520BB-0DB0-403B-923F-C050EBDDDFD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C1520BB-0DB0-403B-923F-C050EBDDDFD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F22D7C3D-26F4-4500-91E4-126A088AEB7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F22D7C3D-26F4-4500-91E4-126A088AEB7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F22D7C3D-26F4-4500-91E4-126A088AEB7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F22D7C3D-26F4-4500-91E4-126A088AEB7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F8FCE7C-93E0-46BF-9933-785E48953725}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F8FCE7C-93E0-46BF-9933-785E48953725}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F8FCE7C-93E0-46BF-9933-785E48953725}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F8FCE7C-93E0-46BF-9933-785E48953725}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CA1EC88-1913-414D-B8B6-35103A91C3DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CA1EC88-1913-414D-B8B6-35103A91C3DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CA1EC88-1913-414D-B8B6-35103A91C3DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CA1EC88-1913-414D-B8B6-35103A91C3DC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4C1520BB-0DB0-403B-923F-C050EBDDDFD3} = {E206AB3C-BFC3-4303-B6B0-CEB1311ED9AB}
+		{F22D7C3D-26F4-4500-91E4-126A088AEB7F} = {03A17BAC-1AA6-40DB-B379-96A881932776}
+		{03A17BAC-1AA6-40DB-B379-96A881932776} = {E206AB3C-BFC3-4303-B6B0-CEB1311ED9AB}
+		{0F8FCE7C-93E0-46BF-9933-785E48953725} = {03A17BAC-1AA6-40DB-B379-96A881932776}
+		{0CA1EC88-1913-414D-B8B6-35103A91C3DC} = {03A17BAC-1AA6-40DB-B379-96A881932776}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A8755639-8005-4915-BE05-0F07B81B1BF5}
+	EndGlobalSection
+EndGlobal
