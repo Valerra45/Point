@@ -17,19 +17,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.External.Infrastructu
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Point.Order", "Point.Order", "{F6445BCF-6709-4775-A536-180B47C0F031}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Point.Order.Core", "Point.Order\Point.Order.Core\Point.Order.Core.csproj", "{6EC48DAE-BC25-4510-BAB0-8322649EBBD2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.Order.Core", "Point.Order\Point.Order.Core\Point.Order.Core.csproj", "{6EC48DAE-BC25-4510-BAB0-8322649EBBD2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Point.Order.Infrastructure", "Point.Order\Point.Order.Infrastructure\Point.Order.Infrastructure.csproj", "{1EAD0D63-DB17-4876-BD2A-F0264889C459}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.Order.Infrastructure", "Point.Order\Point.Order.Infrastructure\Point.Order.Infrastructure.csproj", "{1EAD0D63-DB17-4876-BD2A-F0264889C459}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Point.Order.WebHost", "Point.Order\Point.Order.WebHost\Point.Order.WebHost.csproj", "{0A4237CE-1F40-4165-90F0-FDD5D2BE4770}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.Order.WebHost", "Point.Order\Point.Order.WebHost\Point.Order.WebHost.csproj", "{0A4237CE-1F40-4165-90F0-FDD5D2BE4770}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Point.Admin", "Point.Admin", "{6B87DA8E-EABA-45F9-BC50-989C43E2E7B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Point.Admin.Core", "Point.Admin\Point.Admin.Core\Point.Admin.Core.csproj", "{CE88C7BB-85C8-4829-96B3-84B68A33A30A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.Admin.Core", "Point.Admin\Point.Admin.Core\Point.Admin.Core.csproj", "{CE88C7BB-85C8-4829-96B3-84B68A33A30A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Point.Admin.Infrastructure", "Point.Admin\Point.Admin.Infrastructure\Point.Admin.Infrastructure.csproj", "{FDD26B35-65DB-430D-8401-72E54F217E42}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.Admin.Infrastructure", "Point.Admin\Point.Admin.Infrastructure\Point.Admin.Infrastructure.csproj", "{FDD26B35-65DB-430D-8401-72E54F217E42}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Point.Admin.WebHost", "Point.Admin\Point.Admin.WebHost\Point.Admin.WebHost.csproj", "{3A0E0D79-F683-4E5B-A935-F6341C0FC9CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.Admin.WebHost", "Point.Admin\Point.Admin.WebHost\Point.Admin.WebHost.csproj", "{3A0E0D79-F683-4E5B-A935-F6341C0FC9CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Point.Identity.WebHost", "Point.Identity\Point.Identity.WebHost\Point.Identity.WebHost.csproj", "{AAA3D442-FFE7-4CB0-B1AF-764F0C0312A4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Point.Identity", "Point.Identity", "{7DF1D671-4279-48CC-A2AC-B459D6CCDF0C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -77,6 +81,10 @@ Global
 		{3A0E0D79-F683-4E5B-A935-F6341C0FC9CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A0E0D79-F683-4E5B-A935-F6341C0FC9CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A0E0D79-F683-4E5B-A935-F6341C0FC9CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAA3D442-FFE7-4CB0-B1AF-764F0C0312A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAA3D442-FFE7-4CB0-B1AF-764F0C0312A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAA3D442-FFE7-4CB0-B1AF-764F0C0312A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAA3D442-FFE7-4CB0-B1AF-764F0C0312A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -95,6 +103,8 @@ Global
 		{CE88C7BB-85C8-4829-96B3-84B68A33A30A} = {6B87DA8E-EABA-45F9-BC50-989C43E2E7B3}
 		{FDD26B35-65DB-430D-8401-72E54F217E42} = {6B87DA8E-EABA-45F9-BC50-989C43E2E7B3}
 		{3A0E0D79-F683-4E5B-A935-F6341C0FC9CD} = {6B87DA8E-EABA-45F9-BC50-989C43E2E7B3}
+		{AAA3D442-FFE7-4CB0-B1AF-764F0C0312A4} = {7DF1D671-4279-48CC-A2AC-B459D6CCDF0C}
+		{7DF1D671-4279-48CC-A2AC-B459D6CCDF0C} = {E206AB3C-BFC3-4303-B6B0-CEB1311ED9AB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A8755639-8005-4915-BE05-0F07B81B1BF5}
