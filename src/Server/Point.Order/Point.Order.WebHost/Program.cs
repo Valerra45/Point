@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Point.Order.WebHost
+namespace Point.Ordering.WebHost
 {
     public class Program
     {

@@ -15,13 +15,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.External.Core", "Poin
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.External.Infrastructure", "Point.External\Point.External.Infrastructure\Point.External.Infrastructure.csproj", "{0CA1EC88-1913-414D-B8B6-35103A91C3DC}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Point.Order", "Point.Order", "{F6445BCF-6709-4775-A536-180B47C0F031}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Point.Ordering", "Point.Ordering", "{F6445BCF-6709-4775-A536-180B47C0F031}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.Order.Core", "Point.Order\Point.Order.Core\Point.Order.Core.csproj", "{6EC48DAE-BC25-4510-BAB0-8322649EBBD2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.Ordering.Core", "Point.Order\Point.Order.Core\Point.Ordering.Core.csproj", "{6EC48DAE-BC25-4510-BAB0-8322649EBBD2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.Order.Infrastructure", "Point.Order\Point.Order.Infrastructure\Point.Order.Infrastructure.csproj", "{1EAD0D63-DB17-4876-BD2A-F0264889C459}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.Ordering.Infrastructure", "Point.Order\Point.Order.Infrastructure\Point.Ordering.Infrastructure.csproj", "{1EAD0D63-DB17-4876-BD2A-F0264889C459}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.Order.WebHost", "Point.Order\Point.Order.WebHost\Point.Order.WebHost.csproj", "{0A4237CE-1F40-4165-90F0-FDD5D2BE4770}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.Ordering.WebHost", "Point.Order\Point.Order.WebHost\Point.Ordering.WebHost.csproj", "{0A4237CE-1F40-4165-90F0-FDD5D2BE4770}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Point.Admin", "Point.Admin", "{6B87DA8E-EABA-45F9-BC50-989C43E2E7B3}"
 EndProject
@@ -31,7 +31,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.Admin.Infrastructure"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.Admin.WebHost", "Point.Admin\Point.Admin.WebHost\Point.Admin.WebHost.csproj", "{3A0E0D79-F683-4E5B-A935-F6341C0FC9CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Point.Identity.WebHost", "Point.Identity\Point.Identity.WebHost\Point.Identity.WebHost.csproj", "{AAA3D442-FFE7-4CB0-B1AF-764F0C0312A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.Identity.WebHost", "Point.Identity\Point.Identity.WebHost\Point.Identity.WebHost.csproj", "{AAA3D442-FFE7-4CB0-B1AF-764F0C0312A4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Point.Identity", "Point.Identity", "{7DF1D671-4279-48CC-A2AC-B459D6CCDF0C}"
 EndProject
