@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace Point.SharedKernel.Abstractions
 {
-    public interface IBaseEntity
+    public interface IDbInitializer
     {
-        Guid Id { get; set; }
-
-        DateTime Created { get; set; }
-
-        DateTime? Update { get; set; }
+        void InitializeDb();
     }
 }
