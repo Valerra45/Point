@@ -13,8 +13,4 @@
     <ProjectReference Include="..\..\Point.SharedKernel\Point.SharedKernel.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Domain\Entity\" />
-  </ItemGroup>
-
 </Project>
