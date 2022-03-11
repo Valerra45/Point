@@ -17,11 +17,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.External.Infrastructu
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Point.Ordering", "Point.Ordering", "{F6445BCF-6709-4775-A536-180B47C0F031}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.Ordering.Core", "Point.Order\Point.Order.Core\Point.Ordering.Core.csproj", "{6EC48DAE-BC25-4510-BAB0-8322649EBBD2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.Ordering.Core", "Point.Ordering\Point.Order.Core\Point.Ordering.Core.csproj", "{6EC48DAE-BC25-4510-BAB0-8322649EBBD2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.Ordering.Infrastructure", "Point.Order\Point.Order.Infrastructure\Point.Ordering.Infrastructure.csproj", "{1EAD0D63-DB17-4876-BD2A-F0264889C459}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.Ordering.Infrastructure", "Point.Ordering\Point.Order.Infrastructure\Point.Ordering.Infrastructure.csproj", "{1EAD0D63-DB17-4876-BD2A-F0264889C459}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.Ordering.WebHost", "Point.Order\Point.Order.WebHost\Point.Ordering.WebHost.csproj", "{0A4237CE-1F40-4165-90F0-FDD5D2BE4770}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.Ordering.WebHost", "Point.Ordering\Point.Order.WebHost\Point.Ordering.WebHost.csproj", "{0A4237CE-1F40-4165-90F0-FDD5D2BE4770}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Point.Admin", "Point.Admin", "{6B87DA8E-EABA-45F9-BC50-989C43E2E7B3}"
 EndProject
