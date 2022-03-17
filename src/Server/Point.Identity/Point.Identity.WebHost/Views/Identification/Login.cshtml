@@ -1,0 +1,35 @@
+﻿@model LoginViewModel
+
+@{
+
+}
+
+<form class="sign-in-form" asp-controller="Identification" asp-action="Login" method="post">
+    <input type="hidden" asp-for="ReturnUrl" />
+    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+    <div>
+        <label for="userName" class="visually-hidden">Username</label>
+        <input class="form-control" id="userName" placeholder="UserName" asp-for="UserName" />
+        <span asp-validation-for="UserName"></span>
+    </div>
+    <div>
+        <label for="password" class="visually-hidden">Password</label>
+        <input class="form-control" id="password" placeholder="Password" asp-for="Password" type="password" />
+        <span asp-validation-for="Password"></span>
+    </div>
+    <div class="checkbox">
+        <label>
+            <input type="checkbox" asp-for="Remember" />
+            Remember me
+        </label>
+    </div>
+    <div class="row align-items-center">
+        <div class="col">
+            <input class="w-100 btn btn-lg btn-primary" type="submit" value="Sign In" />
+        </div>
+        <div class="col">
+            <a class="nav-link text-secondary" asp-controller="Identification" asp-action="Register"
+               asp-route-returnUrl="@Model.ReturnUrl">Register</a>
+        </div>
+    </div>
+</form>

@@ -1,6 +1,6 @@
 ﻿{
   "profiles": {
-    "Point.External.Api": {
+    "Point.Ocelot.WebHost": {
       "commandName": "Project",
       "launchBrowser": true,
       "applicationUrl": "https://localhost:9001;http://localhost:9000",

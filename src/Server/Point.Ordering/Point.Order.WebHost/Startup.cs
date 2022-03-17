@@ -52,7 +52,7 @@ namespace Point.Ordering.WebHost
             }
 
             app.UseRouting();
-
+   
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapDefaultControllerRoute();

@@ -1,0 +1,18 @@
+﻿.sign-in-form {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+    .sign-in-form div {
+        max-width: 400px;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+.checkbox {
+    font-weight: 600;
+    text-align:center
+}
