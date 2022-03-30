@@ -37,9 +37,9 @@ namespace Point.Ordering.Infrastructure.Repositories
 
         public async Task<IEnumerable<T>> GetAllAsync()
         {
-            var entity = await _context.Set<T>().ToListAsync();
+            var entities = await _context.Set<T>().ToListAsync();
 
-            return entity;
+            return entities;
         }
 
         public async Task<T> GetByIdAsync(Guid id)

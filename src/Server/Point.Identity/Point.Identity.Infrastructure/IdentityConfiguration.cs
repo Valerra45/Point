@@ -31,7 +31,18 @@ namespace Point.Identity.Infrastructure
                 },
 
                 RedirectUris = { "https://localhost:44326/authentication/login-callback" },
+                FrontChannelLogoutUri = "https://localhost:44326/signout-oidc",
                 PostLogoutRedirectUris = { "https://localhost:44326/authentication/logout-callback" },
+            };
+
+            yield return new Client
+            {
+                ClientId = "m2m.client",
+
+                AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
+                ClientSecrets = { new Secret("m2m.client".Sha256()) },
+
+                AllowedScopes = { "m2m_client" }
             };
         }
 
@@ -52,7 +63,7 @@ namespace Point.Identity.Infrastructure
         {
             yield return new ApiScope("ServerAPI", "Server API");
             yield return new ApiScope("Client", "Client");
-
+            yield return new ApiScope("M2mClient", "M2m Client");
         }
     }
 }

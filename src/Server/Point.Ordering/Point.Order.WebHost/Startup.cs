@@ -27,6 +27,8 @@ namespace Point.Ordering.WebHost
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddControllers();
+
             services.AddDbContext<OrderContext>(options =>
             {
                 options.UseNpgsql(_config.GetConnectionString("Default"));
@@ -35,16 +37,20 @@ namespace Point.Ordering.WebHost
 
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
+            services.AddScoped<IDbInitializer, DbInitializer>();
+
             services
                 .AddGraphQLServer()
-                .AddQueryType<Queries>()
-                .AddMutationType<Mutations>()
+                .AddQueryType<IssuePointQueries>()
+                .AddMutationType<IssuePointMutations>()
                 .AddProjections()
                 .AddFiltering()
                 .AddSorting();
         }
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, 
+            IWebHostEnvironment env,
+            IDbInitializer dbInitializer)
         {
             if (env.IsDevelopment())
             {
@@ -55,8 +61,12 @@ namespace Point.Ordering.WebHost
    
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapDefaultControllerRoute();
+                endpoints.MapControllers();
+
+                endpoints.MapGraphQL("/graphql");
             });
+
+            dbInitializer.InitializeDb();
         }
     }
 }

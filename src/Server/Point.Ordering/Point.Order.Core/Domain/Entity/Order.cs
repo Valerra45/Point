@@ -14,10 +14,10 @@ namespace Point.Ordering.Core.Domain.Entity
 
         public Guid OrderId { get; set; }
 
-        public List<OrderItem> OrderItems { get; set; }
+        public virtual ICollection<OrderItem> OrderItems { get; set; }
 
         public OrderStatus Status { get; set; }
 
-        public Client Client { get; set; }
+        public virtual Client Client { get; set; }
     }
 }

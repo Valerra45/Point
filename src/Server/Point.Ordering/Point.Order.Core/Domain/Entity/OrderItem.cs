@@ -13,5 +13,7 @@ namespace Point.Ordering.Core.Domain.Entity
         public string Description { get; set; }
 
         public int Count { get; set; }
+
+        public virtual Order Order { get; set; }
     }
 }
