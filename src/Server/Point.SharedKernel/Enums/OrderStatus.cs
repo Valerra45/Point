@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Point.Ordering.Core.Domain.Entity
+namespace Point.SharedKernel.Enums
 {
     public enum OrderStatus
     {

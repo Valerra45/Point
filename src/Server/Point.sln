@@ -41,9 +41,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.Ocelot.WebHost", "Poi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Point.ApiGw", "Point.ApiGw", "{16DE5D4B-E095-42B0-8309-B960AAE1B996}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Point.Identity.Core", "Point.Identity\Point.Identity.Core\Point.Identity.Core.csproj", "{91307867-4095-440A-B91C-10D10E8AD52A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.Identity.Core", "Point.Identity\Point.Identity.Core\Point.Identity.Core.csproj", "{91307867-4095-440A-B91C-10D10E8AD52A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Point.Identity.Infrastructure", "Point.Identity\Point.Identity.Infrastructure\Point.Identity.Infrastructure.csproj", "{83FBBE56-AF4C-4A26-9187-2D98D583FEFD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.Identity.Infrastructure", "Point.Identity\Point.Identity.Infrastructure\Point.Identity.Infrastructure.csproj", "{83FBBE56-AF4C-4A26-9187-2D98D583FEFD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.Contracts", "Point.Contract\Point.Contracts.csproj", "{0CD05163-3E78-4317-8361-D491BDEA409D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -107,6 +109,10 @@ Global
 		{83FBBE56-AF4C-4A26-9187-2D98D583FEFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83FBBE56-AF4C-4A26-9187-2D98D583FEFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83FBBE56-AF4C-4A26-9187-2D98D583FEFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CD05163-3E78-4317-8361-D491BDEA409D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CD05163-3E78-4317-8361-D491BDEA409D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CD05163-3E78-4317-8361-D491BDEA409D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CD05163-3E78-4317-8361-D491BDEA409D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -132,6 +138,7 @@ Global
 		{16DE5D4B-E095-42B0-8309-B960AAE1B996} = {E206AB3C-BFC3-4303-B6B0-CEB1311ED9AB}
 		{91307867-4095-440A-B91C-10D10E8AD52A} = {7DF1D671-4279-48CC-A2AC-B459D6CCDF0C}
 		{83FBBE56-AF4C-4A26-9187-2D98D583FEFD} = {7DF1D671-4279-48CC-A2AC-B459D6CCDF0C}
+		{0CD05163-3E78-4317-8361-D491BDEA409D} = {9B3FA360-01C2-4826-9AF7-DCA7D0860C8D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A8755639-8005-4915-BE05-0F07B81B1BF5}

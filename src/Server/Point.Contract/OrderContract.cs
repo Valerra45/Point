@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Point.Ordering.Core.Domain.Entity
+namespace Point.Contracts
 {
-    public class Order : BaseEntity
+    public class OrderContract
     {
         public string Number { get; set; }
 
@@ -15,10 +15,15 @@ namespace Point.Ordering.Core.Domain.Entity
 
         public Guid OrderId { get; set; }
 
-        public virtual ICollection<OrderItem> OrderItems { get; set; }
+        public List<OrderItem> OrderItems { get; set; }
 
-        public OrderStatus Status { get; set; }
+        public class OrderItem
+        {
+            public string Name { get; set; }
 
-        public virtual Client Client { get; set; }
+            public string Description { get; set; }
+
+            public int Count { get; set; }
+        }
     }
 }
