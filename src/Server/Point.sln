@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{E206AB3C-BFC3-4303-B6B0-CEB1311ED9AB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.SharedKernel", "Point.SharedKernel\Point.SharedKernel.csproj", "{4C1520BB-0DB0-403B-923F-C050EBDDDFD3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.SharedKernel", "Point.Shared\Point.SharedKernel\Point.SharedKernel.csproj", "{4C1520BB-0DB0-403B-923F-C050EBDDDFD3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.External.Api", "Point.External\Point.External.Api\Point.External.Api.csproj", "{F22D7C3D-26F4-4500-91E4-126A088AEB7F}"
 EndProject
@@ -45,7 +45,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.Identity.Core", "Poin
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.Identity.Infrastructure", "Point.Identity\Point.Identity.Infrastructure\Point.Identity.Infrastructure.csproj", "{83FBBE56-AF4C-4A26-9187-2D98D583FEFD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.Contracts", "Point.Contract\Point.Contracts.csproj", "{0CD05163-3E78-4317-8361-D491BDEA409D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.Contracts", "Point.Shared\Point.Contract\Point.Contracts.csproj", "{0CD05163-3E78-4317-8361-D491BDEA409D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
