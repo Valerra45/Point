@@ -5,4 +5,8 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Point.Admin.Core\Point.Admin.Core.csproj" />
+  </ItemGroup>
+
 </Project>

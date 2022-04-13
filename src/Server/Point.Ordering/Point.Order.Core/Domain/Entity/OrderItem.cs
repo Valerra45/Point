@@ -8,9 +8,7 @@ namespace Point.Ordering.Core.Domain.Entity
 {
     public class OrderItem : BaseEntity
     {
-        public string Name { get; set; }
-
-        public string Description { get; set; }
+        public Guid ProductId { get; set; }
 
         public int Count { get; set; }
 
