@@ -7,7 +7,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Point.Ordering.Infrastructure.Data;
 using Point.Ordering.Infrastructure.Repositories;
-using Point.Ordering.WebHost.GraphQL;
+using Point.Ordering.WebHost.GraphQL.Mutations;
+using Point.Ordering.WebHost.GraphQL.Queryes;
 using Point.SharedKernel.Abstractions;
 using System;
 using System.Collections.Generic;
@@ -41,8 +42,8 @@ namespace Point.Ordering.WebHost
 
             services
                 .AddGraphQLServer()
-                .AddQueryType<IssuePointQueries>()
-                .AddMutationType<IssuePointMutations>()
+                .AddQueryType<IssuePointQuery>()
+                .AddMutationType<IssuePointMutation>()
                 .AddProjections()
                 .AddFiltering()
                 .AddSorting();

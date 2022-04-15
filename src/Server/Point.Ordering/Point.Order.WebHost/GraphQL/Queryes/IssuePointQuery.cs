@@ -10,9 +10,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Point.Ordering.WebHost.GraphQL
+namespace Point.Ordering.WebHost.GraphQL.Queryes
 {
-    public class IssuePointQueries
+    public class IssuePointQuery
     {
         [UseProjection]
         [UseFiltering]

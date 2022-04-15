@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Point.Contract\Point.Contracts.csproj" />
+    <ProjectReference Include="..\..\Point.Shared\Point.Contract\Point.Contracts.csproj" />
     <ProjectReference Include="..\Point.External.Core\Point.External.Core.csproj" />
   </ItemGroup>
 

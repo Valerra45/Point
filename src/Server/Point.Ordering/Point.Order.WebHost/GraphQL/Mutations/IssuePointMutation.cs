@@ -8,18 +8,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Point.Ordering.WebHost.GraphQL
+namespace Point.Ordering.WebHost.GraphQL.Mutations
 {
-    public class IssuePointMutations
+    public class IssuePointMutation
     {
-        private readonly IRepository<IssuePoint> _repository;
-
-        public IssuePointMutations([Service] IRepository<IssuePoint> repository)
-        {
-            _repository = repository;
-        }
-
-        public async Task<IssuePoint> Add(CreateIssuePoint createPoint)
+        public async Task<IssuePoint> Add([Service] IRepository<IssuePoint> repository,
+            CreateIssuePoint createPoint)
         {
             var point = new IssuePoint
             {
@@ -28,7 +22,7 @@ namespace Point.Ordering.WebHost.GraphQL
                 Phone = createPoint.Phone
             };
 
-            await _repository.AddAsync(point);
+            await repository.AddAsync(point);
 
             return point;
         }
