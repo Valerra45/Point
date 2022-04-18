@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Point.External.Core.Domain.Entity;
 using Point.SharedKernel.Abstractions;
+using Point.SharedKernel.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Point.External.Api.Services.IssuePoints.Queryes
+namespace Point.External.Infrastructure.Services.Points.Queryes
 {
     public class GetIssuePointByIdQuery : IRequest<IssuePoint>
     {
@@ -32,6 +33,11 @@ namespace Point.External.Api.Services.IssuePoints.Queryes
         public async Task<IssuePoint> Handle(GetIssuePointByIdQuery request, CancellationToken cancellationToken)
         {
             var point = await _pointRepository.GetByIdAsync(request.Id);
+
+            if (point == null)
+            {
+                throw new EntityNotFoundException($"{nameof(IssuePoint)} with id '{request.Id}' doesn't exist");
+            }
 
             return point;
         }

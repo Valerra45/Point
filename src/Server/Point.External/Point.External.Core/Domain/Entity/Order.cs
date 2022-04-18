@@ -16,6 +16,10 @@ namespace Point.External.Core.Domain.Entity
 
         public Guid OrderId { get; set; }
 
+        public Client Client { get; set; }
+
+        public IssuePoint IssuePoint { get; set; }
+
         public List<OrderItem> OrderItems { get; set; }
 
         public OrderStatus Status { get; set; }

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Point.External.Api.Services.IssuePoints.Queryes
+namespace Point.External.Infrastructure.Services.Points.Queryes
 {
     public class GetAllIssuePointsQuery : IRequest<IEnumerable<IssuePoint>> { }
 

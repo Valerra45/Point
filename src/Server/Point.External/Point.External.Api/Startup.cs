@@ -9,6 +9,7 @@ using Microsoft.Extensions.Options;
 using Point.External.Infrastructure.Data;
 using Point.External.Infrastructure.Environment;
 using Point.External.Infrastructure.Repositories;
+using Point.External.Infrastructure.Services.Points.Queryes;
 using Point.SharedKernel.Abstractions;
 using System;
 using System.Collections.Generic;
@@ -47,7 +48,9 @@ namespace Point.External.Api
                 options.Version = "1.0";
             });
 
-            services.AddMediatR(typeof(Startup).Assembly);
+            services.AddMediatR(typeof(GetAllIssuePointsQuery).Assembly);
+
+            services.AddAutoMapper(typeof(Startup).Assembly);
         }
 
         public void Configure(IApplicationBuilder app,

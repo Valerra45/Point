@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Point.Contracts
 {
-    public class OrderStatusContract
+    public interface IOrderStatusContract
     {
         public Guid OrderId { get; set; }
 

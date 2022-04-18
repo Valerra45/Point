@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Point.External.Api.Services.IssuePoints.Commands
+namespace Point.External.Infrastructure.Services.Points.Commands
 {
-    public class CreateIssuePointCommand : IRequest<bool>
+    public class CreateIssuePointCommand : IRequest<Guid>
     {
-        public IssuePoint Point { get; set; }
+        public IssuePoint Point { get; }
 
         public CreateIssuePointCommand(IssuePoint point)
         {
@@ -20,7 +20,7 @@ namespace Point.External.Api.Services.IssuePoints.Commands
         }
     }
 
-    public class CreateIssuePointCommandHandler : IRequestHandler<CreateIssuePointCommand, bool>
+    public class CreateIssuePointCommandHandler : IRequestHandler<CreateIssuePointCommand, Guid>
     {
         private readonly IRepository<IssuePoint> _pointRepository;
 
@@ -29,12 +29,11 @@ namespace Point.External.Api.Services.IssuePoints.Commands
             _pointRepository = pointRepository;
         }
 
-
-        public async Task<bool> Handle(CreateIssuePointCommand request, CancellationToken cancellationToken)
+        public async Task<Guid> Handle(CreateIssuePointCommand request, CancellationToken cancellationToken)
         {
             await _pointRepository.AddAsync(request.Point);
 
-            return true; 
+            return request.Point.Id; 
         }
     }
 }

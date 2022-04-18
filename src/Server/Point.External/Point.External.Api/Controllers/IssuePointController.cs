@@ -1,7 +1,9 @@
-﻿using MediatR;
+﻿using AutoMapper;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Point.External.Api.Services.IssuePoints.Queryes;
+using Point.External.Api.Models;
 using Point.External.Core.Domain.Entity;
+using Point.External.Infrastructure.Services.Points.Queryes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,14 +18,17 @@ namespace Point.External.Api.Controllers
         : ControllerBase
     {
         private readonly IMediator _mediatr;
+        private readonly IMapper _mapper;
 
-        public IssuePointController(IMediator mediatr)
+        public IssuePointController(IMediator mediatr,
+            IMapper mapper)
         {
             _mediatr = mediatr;
+            _mapper = mapper;
         }
 
         [HttpGet]
-        public async Task<ActionResult<IssuePoint>> GetAllAsync()
+        public async Task<ActionResult<IEnumerable<IssuePoint>>> GetAllAsync()
         {
             var response = await _mediatr.Send(new GetAllIssuePointsQuery());
 
@@ -31,11 +36,13 @@ namespace Point.External.Api.Controllers
         }
 
         [HttpGet("{id:guid}")]
-        public async Task<ActionResult<IssuePoint>> GetAsync(Guid id)
+        public async Task<ActionResult<IssuePointDto>> GetAsync(Guid id)
         {
-            var respons = await _mediatr.Send(new GetIssuePointByIdQuery(id));
+            var point = await _mediatr.Send(new GetIssuePointByIdQuery(id));
 
-            return Ok(respons);
+            var response = _mapper.Map<IssuePointDto>(point);
+
+            return Ok(response);
         }
     }
 }

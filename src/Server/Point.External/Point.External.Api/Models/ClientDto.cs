@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Point.External.Core.Domain.Entity
+namespace Point.External.Api.Models
 {
-    public class Client : BaseEntity
+    public class ClientDto
     {
         public Guid ClientId { get; set; }
+
         public string Name { get; set; }
 
         public string Description { get; set; }
