@@ -4,12 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Point.Admin.Core.Domain.Entity
+namespace Point.SharedKernel.DtoModels
 {
-    public class Client : BaseEntity
+    public class OrderItemDto
     {
+        public Guid ProductId { get; set; }
+
         public string Name { get; set; }
 
         public string Description { get; set; }
+
+        public int Count { get; set; }
     }
 }

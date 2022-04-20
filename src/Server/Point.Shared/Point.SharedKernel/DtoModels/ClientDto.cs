@@ -4,16 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Point.External.Api.Models
+namespace Point.SharedKernel.DtoModels
 {
-    public class OrderItemDto
+    public class ClientDto
     {
-        public Guid ProductId { get; set; }
+        public Guid ClientId { get; set; }
 
         public string Name { get; set; }
 
         public string Description { get; set; }
-
-        public int Count { get; set; }
     }
 }

@@ -15,6 +15,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+    <ProjectReference Include="..\..\Point.Shared\Point.Contract\Point.Contracts.csproj" />
     <ProjectReference Include="..\Point.Order.Core\Point.Ordering.Core.csproj" />
   </ItemGroup>
 

@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Point.External.Api.Models
+namespace Point.Admin.WebHost.Models
 {
-    public class ClientDto
+    public class CreateIssuePoint
     {
-        public Guid ClientId { get; set; }
-
         public string Name { get; set; }
 
-        public string Description { get; set; }
+        public string Address { get; set; }
+
+        public string Phone { get; set; }
     }
 }

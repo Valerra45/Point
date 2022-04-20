@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Point.External.Api.Models
+namespace Point.SharedKernel.DtoModels
 {
     public class OrderDto
     {

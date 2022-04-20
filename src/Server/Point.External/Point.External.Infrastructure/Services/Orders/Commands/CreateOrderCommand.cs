@@ -26,7 +26,7 @@ namespace Point.External.Infrastructure.Services.Orders.Commands
 
         public CreateOrderCommandHandler(IRepository<Order> orderRepository)
         {
-            _orderRepository = orderRepository;
+            _orderRepository = orderRepository;      
         }
 
         public async Task<Guid> Handle(CreateOrderCommand request, CancellationToken cancellationToken)

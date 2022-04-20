@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using Point.External.Api.Models;
 using Point.External.Core.Domain.Entity;
+using Point.SharedKernel.DtoModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,10 +14,15 @@ namespace Point.External.Api.MapProfiles
         public ExternalMapProfiles()
         {
             CreateMap<Client, ClientDto>()
-                .ReverseMap();
+                .ReverseMap(); 
+
             CreateMap<IssuePoint, IssuePointDto>()
                 .ReverseMap();
+
             CreateMap<Order, OrderDto>()
+                .ReverseMap();
+
+            CreateMap<OrderItem, OrderItemDto>()
                 .ReverseMap();
         }
     }

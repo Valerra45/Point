@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Point.Ordering.Core.Domain.Entity
+namespace Point.Contracts
 {
-    public class IssuePoint : BaseEntity
+    public interface IIssuePointContract
     {
-        public Guid PointId { get; set; }
-
+        public Guid Id { get; set; }
 
         public string Name { get; set; }
 

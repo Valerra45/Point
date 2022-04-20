@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Point.External.Api.Models;
 using Point.External.Core.Domain.Entity;
 using Point.External.Infrastructure.Services.Points.Queryes;
+using Point.SharedKernel.DtoModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;

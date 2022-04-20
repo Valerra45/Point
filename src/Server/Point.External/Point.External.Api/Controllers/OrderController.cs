@@ -1,10 +1,13 @@
 ﻿using AutoMapper;
+using MassTransit;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Point.External.Api.Models;
+using Newtonsoft.Json;
+using Point.Contracts;
 using Point.External.Core.Domain.Entity;
 using Point.External.Infrastructure.Services.Orders.Commands;
 using Point.External.Infrastructure.Services.Orders.Queryes;
+using Point.SharedKernel.DtoModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,12 +23,15 @@ namespace Point.External.Api.Controllers
     {
         private readonly IMediator _mediatr;
         private readonly IMapper _mapper;
+        private readonly IPublishEndpoint _publishEndpoint;
 
         public OrderController(IMediator mediatr,
-            IMapper mapper)
+            IMapper mapper,
+            IPublishEndpoint publishEndpoint)
         {
             _mediatr = mediatr;
             _mapper = mapper;
+            _publishEndpoint = publishEndpoint;
         }
 
         [HttpGet]
@@ -50,6 +56,11 @@ namespace Point.External.Api.Controllers
             var order = _mapper.Map<Order>(request);
 
             var id = await _mediatr.Send(new CreateOrderCommand(order));
+
+            await _publishEndpoint.Publish<IOrderContract>(new
+            {
+                Message = JsonConvert.SerializeObject(request)
+            });
 
             return CreatedAtAction(nameof(GetAsync), new { id = id }, null);
         }

@@ -1,3 +1,4 @@
+using MassTransit;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -5,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Point.Ordering.Infrastructure.Consumers;
 using Point.Ordering.Infrastructure.Data;
 using Point.Ordering.Infrastructure.Repositories;
 using Point.Ordering.WebHost.GraphQL.Mutations;
@@ -39,6 +41,29 @@ namespace Point.Ordering.WebHost
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
             services.AddScoped<IDbInitializer, DbInitializer>();
+
+            services.AddMassTransit(x =>
+            {
+                x.AddConsumer<CreateOrderConsumer>();
+
+                x.UsingRabbitMq((ctx, cfg) =>
+                {
+                    var massTransitSection = _config.GetSection("MassTransit");
+                    var url = massTransitSection.GetValue<string>("Url");
+                    var host = massTransitSection.GetValue<string>("Host");
+                    var userName = massTransitSection.GetValue<string>("UserName");
+                    var password = massTransitSection.GetValue<string>("Password");
+
+                    cfg.Host($"rabbitmq://{url}/{host}", configurator =>
+                    {
+                        configurator.Username(userName);
+                        configurator.Password(password);
+                    });
+                    cfg.ConfigureEndpoints(ctx);
+                });
+            });
+
+            services.AddMassTransitHostedService();
 
             services
                 .AddGraphQLServer()

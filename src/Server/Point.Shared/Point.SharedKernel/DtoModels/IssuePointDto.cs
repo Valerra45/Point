@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Point.External.Api.Models
+namespace Point.SharedKernel.DtoModels
 {
     public class IssuePointDto
     {
-        public Guid PointId { get; set; }
+        public Guid Id { get; set; }
 
         public string Name { get; set; }
 
