@@ -8,6 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using Point.Contracts;
+using Point.External.Infrastructure.Consumers;
 using Point.External.Infrastructure.Data;
 using Point.External.Infrastructure.Environment;
 using Point.External.Infrastructure.Repositories;
@@ -56,6 +57,8 @@ namespace Point.External.Api
 
             services.AddMassTransit(x =>
             {
+                x.AddConsumer<ExternalCreateIssuePointConsumer>(_ => new ExternalCreateIssuePointConsumerDefinition());
+
                 x.UsingRabbitMq((ctx, cfg) =>
                 {
                     var massTransitSection = _configuration.GetSection("MassTransit");

@@ -16,34 +16,20 @@ namespace Point.Ordering.WebHost.GraphQL.Mutations
 {
     public class IssuePointMutation
     {
-        private readonly IMapper _mapper;
-        private readonly IPublishEndpoint _publishEndpoint;
-
-        public IssuePointMutation(IMapper mapper,
-            IPublishEndpoint publishEndpoint)
-        {
-            _mapper = mapper;
-            _publishEndpoint = publishEndpoint;
-        }
-
-        public async Task<IssuePoint> Add([Service] AdminContext context,
-           
+        public async Task<IssuePoint> Add([Service] IRepository<IssuePoint> repository,
+            [Service] IMapper mapper,
+            [Service] IPublishEndpoint publishEndpoint,
             CreateIssuePoint request)
         {
-            var point = _mapper.Map<IssuePoint>(request);
+            var point = mapper.Map<IssuePoint>(request);
 
-            context.IssuePoints.Add(point);
+            await repository.AddAsync(point);
 
-            await context.SaveChangesAsync();
-
-            await _publishEndpoint.Publish<IIssuePointContract>(new 
+            await publishEndpoint.Publish<IIssuePointContract>(new 
             { 
                 Id = point.Id,
-
                 Name = point.Name,
-
                 Address = point.Address,
-
                 Phone = point.Phone
             });
 

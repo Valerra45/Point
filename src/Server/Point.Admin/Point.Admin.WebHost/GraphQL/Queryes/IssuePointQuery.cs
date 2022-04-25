@@ -3,6 +3,7 @@ using HotChocolate.Data;
 using Microsoft.EntityFrameworkCore;
 using Point.Admin.Core.Domain.Entity;
 using Point.Admin.Infrastructure.Data;
+using Point.SharedKernel.Abstractions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +17,7 @@ namespace Point.Admin.WebHost.GraphQL.Queryes
         [UseProjection]
         [UseFiltering]
         [UseSorting]
-        public async Task<IEnumerable<IssuePoint>> Get([Service] AdminContext context) =>
-           await context.IssuePoints.ToListAsync();
+        public async Task<IEnumerable<IssuePoint>> Get([Service] IRepository<IssuePoint> repository) =>
+           await repository.GetAllAsync();
     }
 }

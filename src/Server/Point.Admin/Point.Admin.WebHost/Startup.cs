@@ -7,6 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Point.Admin.Infrastructure.Data;
+using Point.Admin.Infrastructure.Repositories;
 using Point.Admin.WebHost.GraphQL.Queryes;
 using Point.Contracts;
 using Point.Ordering.WebHost.GraphQL.Mutations;
@@ -37,11 +38,13 @@ namespace Point.Admin.WebHost
                 options.UseLazyLoadingProxies();
             });
 
+            services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+
             services.AddScoped<IDbInitializer, DbInitializer>();
 
             services.AddMassTransit(x =>
             {
- 
+
                 x.UsingRabbitMq((ctx, cfg) =>
                 {
                     var massTransitSection = _config.GetSection("MassTransit");
@@ -56,7 +59,6 @@ namespace Point.Admin.WebHost
                         configurator.Password(password);
                     });
 
-
                     cfg.Message<IIssuePointContract>(cfg => { });
 
                     cfg.AutoDelete = true;
@@ -69,8 +71,7 @@ namespace Point.Admin.WebHost
 
             services.AddAutoMapper(typeof(Startup).Assembly);
 
-            services
-                .AddGraphQLServer()
+            services.AddGraphQLServer()
                 .AddQueryType<IssuePointQuery>()
                 .AddMutationType<IssuePointMutation>()
                 .AddProjections()

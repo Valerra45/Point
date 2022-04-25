@@ -45,6 +45,7 @@ namespace Point.Ordering.WebHost
             services.AddMassTransit(x =>
             {
                 x.AddConsumer<CreateOrderConsumer>();
+                x.AddConsumer<OrderingCreateIssuePointConsumer>(_ => new OrderingCreateIssuePointConsumerDefinition());
 
                 x.UsingRabbitMq((ctx, cfg) =>
                 {
@@ -59,6 +60,7 @@ namespace Point.Ordering.WebHost
                         configurator.Username(userName);
                         configurator.Password(password);
                     });
+
                     cfg.ConfigureEndpoints(ctx);
                 });
             });
