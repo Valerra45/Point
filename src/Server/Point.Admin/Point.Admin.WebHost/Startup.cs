@@ -8,9 +8,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Point.Admin.Infrastructure.Data;
 using Point.Admin.Infrastructure.Repositories;
-using Point.Admin.WebHost.GraphQL.Queryes;
+using Point.Admin.WebHost.GraphQL.IssuePoints;
 using Point.Contracts;
-using Point.Ordering.WebHost.GraphQL.Mutations;
+using Point.Ordering.WebHost.GraphQL.IssuePoints;
 using Point.SharedKernel.Abstractions;
 using System;
 using System.Collections.Generic;
@@ -92,7 +92,7 @@ namespace Point.Admin.WebHost
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers();
+                //endpoints.MapControllers();
 
                 endpoints.MapGraphQL("/graphql");
             });

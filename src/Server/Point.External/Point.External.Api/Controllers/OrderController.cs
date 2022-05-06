@@ -39,7 +39,7 @@ namespace Point.External.Api.Controllers
         {
             var response = await _mediatr.Send(new GetAllOrdersQuery());
 
-            return Ok(response);
+            return Ok(_mapper.Map<IEnumerable<OrderDto>>(response));
         }
 
         [HttpGet("{id:guid}")]
@@ -47,7 +47,7 @@ namespace Point.External.Api.Controllers
         {
             var respons = await _mediatr.Send(new GetOrderByIdQuery(id));
 
-            return Ok(respons);
+            return Ok(_mapper.Map<OrderDto>(respons));
         }
 
         [HttpPost]

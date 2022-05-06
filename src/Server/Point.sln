@@ -47,6 +47,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.Identity.Infrastructu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.Contracts", "Point.Shared\Point.Contract\Point.Contracts.csproj", "{0CD05163-3E78-4317-8361-D491BDEA409D}"
 EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "client-app", "..\client-app\client-app.esproj", "{F677C794-4A63-4923-8358-3FCF6DB53877}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -113,6 +115,12 @@ Global
 		{0CD05163-3E78-4317-8361-D491BDEA409D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0CD05163-3E78-4317-8361-D491BDEA409D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0CD05163-3E78-4317-8361-D491BDEA409D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F677C794-4A63-4923-8358-3FCF6DB53877}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F677C794-4A63-4923-8358-3FCF6DB53877}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F677C794-4A63-4923-8358-3FCF6DB53877}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{F677C794-4A63-4923-8358-3FCF6DB53877}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F677C794-4A63-4923-8358-3FCF6DB53877}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F677C794-4A63-4923-8358-3FCF6DB53877}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

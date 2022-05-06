@@ -8,6 +8,8 @@ namespace Point.Ordering.Core.Domain.Entity
 {
     public class Client : BaseEntity
     {
+        public Guid ClientId { get; set; }
+
         public string Name { get; set; }
 
         public string Description { get; set; }

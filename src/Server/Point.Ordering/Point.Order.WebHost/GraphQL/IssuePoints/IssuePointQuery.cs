@@ -1,8 +1,8 @@
 ﻿using HotChocolate;
 using HotChocolate.Data;
-using Microsoft.EntityFrameworkCore;
-using Point.Admin.Core.Domain.Entity;
-using Point.Admin.Infrastructure.Data;
+using Point.Ordering.Core.Domain.Entity;
+using Point.Ordering.Infrastructure.Data;
+using Point.Ordering.Infrastructure.Repositories;
 using Point.SharedKernel.Abstractions;
 using System;
 using System.Collections.Generic;
@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Point.Admin.WebHost.GraphQL.Queryes
+namespace Point.Ordering.WebHost.GraphQL.IssuePoints
 {
     public class IssuePointQuery
     {

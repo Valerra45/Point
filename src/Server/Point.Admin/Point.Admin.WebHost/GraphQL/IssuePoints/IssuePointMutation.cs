@@ -12,7 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Point.Ordering.WebHost.GraphQL.Mutations
+namespace Point.Ordering.WebHost.GraphQL.IssuePoints
 {
     public class IssuePointMutation
     {

@@ -20,5 +20,7 @@ namespace Point.Ordering.Core.Domain.Entity
         public OrderStatus Status { get; set; }
 
         public virtual Client Client { get; set; }
+
+        public virtual IssuePoint IssuePoint { get; set; }
     }
 }

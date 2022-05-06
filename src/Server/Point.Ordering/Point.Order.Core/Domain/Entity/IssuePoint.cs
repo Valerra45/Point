@@ -10,7 +10,6 @@ namespace Point.Ordering.Core.Domain.Entity
     {
         public Guid PointId { get; set; }
 
-
         public string Name { get; set; }
 
         public string Address { get; set; }

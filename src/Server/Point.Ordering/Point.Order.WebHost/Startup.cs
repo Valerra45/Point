@@ -9,8 +9,7 @@ using Microsoft.Extensions.Hosting;
 using Point.Ordering.Infrastructure.Consumers;
 using Point.Ordering.Infrastructure.Data;
 using Point.Ordering.Infrastructure.Repositories;
-using Point.Ordering.WebHost.GraphQL.Mutations;
-using Point.Ordering.WebHost.GraphQL.Queryes;
+using Point.Ordering.WebHost.GraphQL.IssuePoints;
 using Point.SharedKernel.Abstractions;
 using System;
 using System.Collections.Generic;
@@ -67,6 +66,8 @@ namespace Point.Ordering.WebHost
 
             services.AddMassTransitHostedService();
 
+            services.AddAutoMapper(typeof(Startup).Assembly);
+
             services
                 .AddGraphQLServer()
                 .AddQueryType<IssuePointQuery>()
@@ -89,7 +90,7 @@ namespace Point.Ordering.WebHost
    
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers();
+                //endpoints.MapControllers();
 
                 endpoints.MapGraphQL("/graphql");
             });

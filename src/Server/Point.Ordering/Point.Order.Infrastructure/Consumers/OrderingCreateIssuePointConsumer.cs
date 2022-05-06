@@ -12,11 +12,11 @@ namespace Point.Ordering.Infrastructure.Consumers
 {
     public class OrderingCreateIssuePointConsumer : IConsumer<IIssuePointContract>
     {
-        private readonly IRepository<IssuePoint> _repositor;
+        private readonly IRepository<IssuePoint> _pointRepository;
 
-        public OrderingCreateIssuePointConsumer(IRepository<IssuePoint> repositor)
+        public OrderingCreateIssuePointConsumer(IRepository<IssuePoint> pointRepository)
         {
-            _repositor = repositor;
+            _pointRepository = pointRepository;
         }
 
         public async Task Consume(ConsumeContext<IIssuePointContract> context)
@@ -30,7 +30,7 @@ namespace Point.Ordering.Infrastructure.Consumers
                 Created = DateTime.Now
             };
 
-            await _repositor.AddAsync(point);   
+            await _pointRepository.AddAsync(point);   
         }
     }
 }

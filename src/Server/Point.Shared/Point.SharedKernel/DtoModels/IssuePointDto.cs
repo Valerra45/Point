@@ -8,7 +8,7 @@ namespace Point.SharedKernel.DtoModels
 {
     public class IssuePointDto
     {
-        public Guid Id { get; set; }
+        public Guid PointId { get; set; }
 
         public string Name { get; set; }
 
