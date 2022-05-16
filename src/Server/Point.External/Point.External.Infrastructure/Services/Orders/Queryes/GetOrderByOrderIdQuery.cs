@@ -11,32 +11,32 @@ using System.Threading.Tasks;
 
 namespace Point.External.Infrastructure.Services.Orders.Queryes
 {
-    public class GetOrderByIdQuery : IRequest<Order>
+    public class GetOrderByOrderIdQuery : IRequest<Order>
     {
         public Guid Id { get; }
-        
-        public GetOrderByIdQuery(Guid id)
+
+        public GetOrderByOrderIdQuery(Guid id)
         {
-            Id  = id;
+            Id = id;
         }
     }
 
-    public class GetOrderByIdQueryHandler : IRequestHandler<GetOrderByIdQuery, Order>
+    public class GetOrderByOrderIdQueryHandler : IRequestHandler<GetOrderByOrderIdQuery, Order>
     {
         private readonly IRepository<Order> _orderRepository;
 
-        public GetOrderByIdQueryHandler(IRepository<Order> orderRepository)
+        public GetOrderByOrderIdQueryHandler(IRepository<Order> orderRepository)
         {
             _orderRepository = orderRepository;
         }
 
-        public async Task<Order> Handle(GetOrderByIdQuery request, CancellationToken cancellationToken)
+        public async Task<Order> Handle(GetOrderByOrderIdQuery request, CancellationToken cancellationToken)
         {
-            var order = await _orderRepository.GetByIdAsync(request.Id);
+            var order = await _orderRepository.GetFirstWhere(x => x.OrderId == request.Id);
 
             if (order == null)
             {
-                throw new EntityNotFoundException($"{nameof(Order)} with id '{request.Id}' doesn't exist");
+                throw new EntityNotFoundException($"{nameof(Order)} with OrderId '{request.Id}' doesn't exist");
             }
 
             return order;

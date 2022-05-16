@@ -14,7 +14,7 @@ namespace Point.Ordering.WebHost.MapProfiles
         public OrderingMapProfiles()
         {
             CreateMap<ClientDto, Client>()
-                .ReverseMap();
+             .ReverseMap();
 
             CreateMap<IssuePointDto, IssuePoint>()
                 .ReverseMap();

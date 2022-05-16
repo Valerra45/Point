@@ -13,7 +13,7 @@ namespace Point.Ordering.Infrastructure.Data
         {
             yield return new IssuePoint
             {
-                Id = Guid.Parse("D615C738-A9B4-4EA2-B805-69C408347159"),
+                PointId = Guid.Parse("D615C738-A9B4-4EA2-B805-69C408347159"),
                 Created = DateTime.Now,
                 Name = "Points 1",
                 Address = "Address 1",
@@ -22,7 +22,7 @@ namespace Point.Ordering.Infrastructure.Data
 
             yield return new IssuePoint
             {
-                Id = Guid.Parse("F8543DAB-CC43-460E-B3E7-79CD342B4EDA"),
+                PointId = Guid.Parse("F8543DAB-CC43-460E-B3E7-79CD342B4EDA"),
                 Created = DateTime.Now.AddDays(-1),
                 Name = "Points 2",
                 Address = "Address 2",

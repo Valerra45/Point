@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Point.Contracts;
 using Point.Ordering.Infrastructure.Consumers;
 using Point.Ordering.Infrastructure.Data;
 using Point.Ordering.Infrastructure.Repositories;
@@ -60,6 +61,10 @@ namespace Point.Ordering.WebHost
                         configurator.Password(password);
                     });
 
+                    cfg.Message<IOrderStatusContract>(cfg => { });
+
+                    cfg.AutoDelete = true;
+
                     cfg.ConfigureEndpoints(ctx);
                 });
             });
@@ -90,8 +95,6 @@ namespace Point.Ordering.WebHost
    
             app.UseEndpoints(endpoints =>
             {
-                //endpoints.MapControllers();
-
                 endpoints.MapGraphQL("/graphql");
             });
 

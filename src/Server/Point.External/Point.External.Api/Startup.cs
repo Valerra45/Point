@@ -57,6 +57,7 @@ namespace Point.External.Api
 
             services.AddMassTransit(x =>
             {
+                x.AddConsumer<ExternalUpdateOrderStatusConsumer>();
                 x.AddConsumer<ExternalCreateIssuePointConsumer>(_ => new ExternalCreateIssuePointConsumerDefinition());
 
                 x.UsingRabbitMq((ctx, cfg) =>
