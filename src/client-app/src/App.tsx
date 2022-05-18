@@ -1,26 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import NavNemu from './components/Layout';
+import Points from './components/Points';
+import Orders from './components/Orders';
+
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <NavNemu>
+                <Router>
+                    <Routes>
+                        <Route path="/points" element={<Points />} />
+                        <Route path="/orders" element={<Orders />} />
+                    </Routes>
+                </Router>
+            </NavNemu>
+        </div>
+    );
 }
 
 export default App;

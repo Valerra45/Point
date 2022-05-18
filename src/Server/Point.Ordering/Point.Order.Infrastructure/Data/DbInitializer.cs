@@ -18,8 +18,6 @@ namespace Point.Ordering.Infrastructure.Data
 
         public void InitializeDb()
         {
-            _context.Database.EnsureDeleted();
-
             _context.Database.EnsureCreated();
 
             _context.IssuePoints.AddRange(FakeDataFactory.IssuePoints());

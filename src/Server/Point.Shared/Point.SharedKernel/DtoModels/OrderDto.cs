@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Point.SharedKernel.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,6 +18,8 @@ namespace Point.SharedKernel.DtoModels
         public ClientDto Client { get; set; }
 
         public IssuePointDto IssuePoint { get; set; }
+
+        public OrderStatus Status { get; set; }
 
         public List<OrderItemDto> OrderItems { get; set; }
     }

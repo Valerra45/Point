@@ -1,5 +1,5 @@
 ﻿using MassTransit;
-using MassTransit.Mediator;
+using MediatR;
 using Point.Contracts;
 using Point.External.Core.Domain.Entity;
 using Point.External.Infrastructure.Services.Orders.Commands;

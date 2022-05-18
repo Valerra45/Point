@@ -10,7 +10,7 @@ using Point.Contracts;
 using Point.Ordering.Infrastructure.Consumers;
 using Point.Ordering.Infrastructure.Data;
 using Point.Ordering.Infrastructure.Repositories;
-using Point.Ordering.WebHost.GraphQL.IssuePoints;
+using Point.Ordering.WebHost.GraphQL.Orders;
 using Point.SharedKernel.Abstractions;
 using System;
 using System.Collections.Generic;
@@ -30,6 +30,14 @@ namespace Point.Ordering.WebHost
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(confg =>
+                confg.AddPolicy("AllowAll",
+                    p => p.AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+               )
+           );
+
             services.AddControllers();
 
             services.AddDbContext<OrderContext>(options =>
@@ -75,14 +83,14 @@ namespace Point.Ordering.WebHost
 
             services
                 .AddGraphQLServer()
-                .AddQueryType<IssuePointQuery>()
-                .AddMutationType<IssuePointMutation>()
+                .AddQueryType<OrderQuery>()
+                .AddMutationType<OrderMutation>()
                 .AddProjections()
                 .AddFiltering()
                 .AddSorting();
         }
 
-        public void Configure(IApplicationBuilder app, 
+        public void Configure(IApplicationBuilder app,
             IWebHostEnvironment env,
             IDbInitializer dbInitializer)
         {
@@ -91,8 +99,10 @@ namespace Point.Ordering.WebHost
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseCors("AllowAll");
+
             app.UseRouting();
-   
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapGraphQL("/graphql");

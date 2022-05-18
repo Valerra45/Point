@@ -75,7 +75,7 @@ namespace Point.Ordering.Infrastructure.Consumers
 
             if (result != null)
             {
-                product = result;
+                return result;
             }
 
             await _productRepository.AddAsync(product); 

@@ -16,8 +16,4 @@
 		<ProjectReference Include="..\Point.Admin.Infrastructure\Point.Admin.Infrastructure.csproj" />
 	</ItemGroup>
 
-	<ItemGroup>
-	  <Folder Include="GraphQL\Employees\" />
-	</ItemGroup>
-
 </Project>
