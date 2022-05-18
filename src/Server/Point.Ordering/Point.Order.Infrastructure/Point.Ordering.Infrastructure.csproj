@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AutoMapper" Version="11.0.1" />
+		<PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+		<PackageReference Include="EFCore.NamingConventions" Version="5.0.2" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.14" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="5.0.14" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="5.0.14" />
+		<PackageReference Include="Npgsql" Version="5.0.12" />
+		<PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="5.0.10" />
+	</ItemGroup>
+
+	<ItemGroup>
+    <ProjectReference Include="..\..\Point.Shared\Point.Contract\Point.Contracts.csproj" />
+    <ProjectReference Include="..\Point.Order.Core\Point.Ordering.Core.csproj" />
+  </ItemGroup>
+
+</Project>

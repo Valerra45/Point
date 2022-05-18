@@ -1,0 +1,53 @@
+version: "3.7"
+
+services:
+
+    postgres:
+        restart: unless-stopped
+        image: "postgres"
+        environment:
+            - POSTGRES_USER=admin
+            - POSTGRES_PASSWORD=password
+            - POSTGRES_DB=postgresdb
+        ports: 
+            - "5432:5432"
+        volumes:
+            - database-data:/var/lib/postgresql/data/
+
+    pgadmin:
+        restart: unless-stopped
+        image: dpage/pgadmin4
+        environment:
+            - PGADMIN_DEFAULT_EMAIL=pgadmin4@pgadmin.org
+            - PGADMIN_DEFAULT_PASSWORD=admin
+        ports:
+            - "16543:80"
+        volumes:
+            - pgadmin:/root/.pgadmin 
+        depends_on:
+            - postgres 
+    mongo:
+        image: mongo
+        container_name: mongo
+        hostname: mongo
+        restart: always
+        ports:
+            - "27017:27017"
+
+    message-broker:
+        image: rabbitmq:3-management
+        restart: always
+        hostname: "rabbitmq"
+        labels:
+            NAME: "rabbitmq"
+        ports:
+            - "4369:4369"
+            - "5671:5671"
+            - "5672:5672"
+            - "25672:25672"
+            - "15671:15671"
+            - "15672:15672"
+            
+volumes:
+    database-data:
+    pgadmin:          

@@ -20,6 +20,6 @@ namespace Point.External.Core.Domain
 
         public DateTime Created { get; set; }
 
-        public DateTime Update { get; set; }
+        public DateTime? Update { get; set; }
     }
 }

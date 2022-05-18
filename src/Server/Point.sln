@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{E206AB3C-BFC3-4303-B6B0-CEB1311ED9AB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.SharedKernel", "Point.SharedKernel\Point.SharedKernel.csproj", "{4C1520BB-0DB0-403B-923F-C050EBDDDFD3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.SharedKernel", "Point.Shared\Point.SharedKernel\Point.SharedKernel.csproj", "{4C1520BB-0DB0-403B-923F-C050EBDDDFD3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.External.Api", "Point.External\Point.External.Api\Point.External.Api.csproj", "{F22D7C3D-26F4-4500-91E4-126A088AEB7F}"
 EndProject
@@ -17,11 +17,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.External.Infrastructu
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Point.Ordering", "Point.Ordering", "{F6445BCF-6709-4775-A536-180B47C0F031}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.Ordering.Core", "Point.Order\Point.Order.Core\Point.Ordering.Core.csproj", "{6EC48DAE-BC25-4510-BAB0-8322649EBBD2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.Ordering.Core", "Point.Ordering\Point.Order.Core\Point.Ordering.Core.csproj", "{6EC48DAE-BC25-4510-BAB0-8322649EBBD2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.Ordering.Infrastructure", "Point.Order\Point.Order.Infrastructure\Point.Ordering.Infrastructure.csproj", "{1EAD0D63-DB17-4876-BD2A-F0264889C459}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.Ordering.Infrastructure", "Point.Ordering\Point.Order.Infrastructure\Point.Ordering.Infrastructure.csproj", "{1EAD0D63-DB17-4876-BD2A-F0264889C459}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.Ordering.WebHost", "Point.Order\Point.Order.WebHost\Point.Ordering.WebHost.csproj", "{0A4237CE-1F40-4165-90F0-FDD5D2BE4770}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.Ordering.WebHost", "Point.Ordering\Point.Order.WebHost\Point.Ordering.WebHost.csproj", "{0A4237CE-1F40-4165-90F0-FDD5D2BE4770}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Point.Admin", "Point.Admin", "{6B87DA8E-EABA-45F9-BC50-989C43E2E7B3}"
 EndProject
@@ -34,6 +34,20 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.Identity.WebHost", "Point.Identity\Point.Identity.WebHost\Point.Identity.WebHost.csproj", "{AAA3D442-FFE7-4CB0-B1AF-764F0C0312A4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Point.Identity", "Point.Identity", "{7DF1D671-4279-48CC-A2AC-B459D6CCDF0C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Point.Shared", "Point.Shared", "{9B3FA360-01C2-4826-9AF7-DCA7D0860C8D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.Ocelot.WebHost", "Point.ApiGw\Point.Ocelot.WebHost\Point.Ocelot.WebHost.csproj", "{ADA417AD-D0A3-4C15-AC95-0EEBE3F945C4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Point.ApiGw", "Point.ApiGw", "{16DE5D4B-E095-42B0-8309-B960AAE1B996}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.Identity.Core", "Point.Identity\Point.Identity.Core\Point.Identity.Core.csproj", "{91307867-4095-440A-B91C-10D10E8AD52A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.Identity.Infrastructure", "Point.Identity\Point.Identity.Infrastructure\Point.Identity.Infrastructure.csproj", "{83FBBE56-AF4C-4A26-9187-2D98D583FEFD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point.Contracts", "Point.Shared\Point.Contract\Point.Contracts.csproj", "{0CD05163-3E78-4317-8361-D491BDEA409D}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "client-app", "..\client-app\client-app.esproj", "{F677C794-4A63-4923-8358-3FCF6DB53877}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -85,12 +99,34 @@ Global
 		{AAA3D442-FFE7-4CB0-B1AF-764F0C0312A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AAA3D442-FFE7-4CB0-B1AF-764F0C0312A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AAA3D442-FFE7-4CB0-B1AF-764F0C0312A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADA417AD-D0A3-4C15-AC95-0EEBE3F945C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADA417AD-D0A3-4C15-AC95-0EEBE3F945C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADA417AD-D0A3-4C15-AC95-0EEBE3F945C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADA417AD-D0A3-4C15-AC95-0EEBE3F945C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91307867-4095-440A-B91C-10D10E8AD52A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91307867-4095-440A-B91C-10D10E8AD52A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91307867-4095-440A-B91C-10D10E8AD52A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91307867-4095-440A-B91C-10D10E8AD52A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83FBBE56-AF4C-4A26-9187-2D98D583FEFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83FBBE56-AF4C-4A26-9187-2D98D583FEFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83FBBE56-AF4C-4A26-9187-2D98D583FEFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83FBBE56-AF4C-4A26-9187-2D98D583FEFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CD05163-3E78-4317-8361-D491BDEA409D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CD05163-3E78-4317-8361-D491BDEA409D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CD05163-3E78-4317-8361-D491BDEA409D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CD05163-3E78-4317-8361-D491BDEA409D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F677C794-4A63-4923-8358-3FCF6DB53877}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F677C794-4A63-4923-8358-3FCF6DB53877}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F677C794-4A63-4923-8358-3FCF6DB53877}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{F677C794-4A63-4923-8358-3FCF6DB53877}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F677C794-4A63-4923-8358-3FCF6DB53877}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F677C794-4A63-4923-8358-3FCF6DB53877}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{4C1520BB-0DB0-403B-923F-C050EBDDDFD3} = {E206AB3C-BFC3-4303-B6B0-CEB1311ED9AB}
+		{4C1520BB-0DB0-403B-923F-C050EBDDDFD3} = {9B3FA360-01C2-4826-9AF7-DCA7D0860C8D}
 		{F22D7C3D-26F4-4500-91E4-126A088AEB7F} = {03A17BAC-1AA6-40DB-B379-96A881932776}
 		{03A17BAC-1AA6-40DB-B379-96A881932776} = {E206AB3C-BFC3-4303-B6B0-CEB1311ED9AB}
 		{0F8FCE7C-93E0-46BF-9933-785E48953725} = {03A17BAC-1AA6-40DB-B379-96A881932776}
@@ -105,6 +141,12 @@ Global
 		{3A0E0D79-F683-4E5B-A935-F6341C0FC9CD} = {6B87DA8E-EABA-45F9-BC50-989C43E2E7B3}
 		{AAA3D442-FFE7-4CB0-B1AF-764F0C0312A4} = {7DF1D671-4279-48CC-A2AC-B459D6CCDF0C}
 		{7DF1D671-4279-48CC-A2AC-B459D6CCDF0C} = {E206AB3C-BFC3-4303-B6B0-CEB1311ED9AB}
+		{9B3FA360-01C2-4826-9AF7-DCA7D0860C8D} = {E206AB3C-BFC3-4303-B6B0-CEB1311ED9AB}
+		{ADA417AD-D0A3-4C15-AC95-0EEBE3F945C4} = {16DE5D4B-E095-42B0-8309-B960AAE1B996}
+		{16DE5D4B-E095-42B0-8309-B960AAE1B996} = {E206AB3C-BFC3-4303-B6B0-CEB1311ED9AB}
+		{91307867-4095-440A-B91C-10D10E8AD52A} = {7DF1D671-4279-48CC-A2AC-B459D6CCDF0C}
+		{83FBBE56-AF4C-4A26-9187-2D98D583FEFD} = {7DF1D671-4279-48CC-A2AC-B459D6CCDF0C}
+		{0CD05163-3E78-4317-8361-D491BDEA409D} = {9B3FA360-01C2-4826-9AF7-DCA7D0860C8D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A8755639-8005-4915-BE05-0F07B81B1BF5}

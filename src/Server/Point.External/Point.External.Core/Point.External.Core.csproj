@@ -10,11 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Point.SharedKernel\Point.SharedKernel.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Domain\Entity\" />
+    <ProjectReference Include="..\..\Point.Shared\Point.SharedKernel\Point.SharedKernel.csproj" />
   </ItemGroup>
 
 </Project>

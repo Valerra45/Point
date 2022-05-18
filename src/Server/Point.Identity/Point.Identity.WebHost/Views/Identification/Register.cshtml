@@ -1,0 +1,35 @@
+﻿@model RegisterViewModel
+
+<form class="sign-in-form" asp-controller="Identification" asp-action="Register" method="post">
+    <input type="hidden" asp-for="ReturnUrl" />
+    <h1 class="h3 mb-3 fw-normal">Please register</h1>
+    <div>
+        <label for="userName" class="visually-hidden">Username</label>
+        <input class="form-control" id="userName" placeholder="UserName" asp-for="UserName" />
+        <span asp-validation-for="UserName"></span>
+    </div>
+    <div>
+        <label for="email" class="visually-hidden">Email</label>
+        <input class="form-control" id="email" placeholder="Email" asp-for="Email" />
+        <span asp-validation-for="Email"></span>
+    </div>
+    <div>
+        <label for="password" class="visually-hidden">Password</label>
+        <input class="form-control" id="password" placeholder="Password" asp-for="Password" />
+        <span asp-validation-for="Password"></span>
+    </div>
+    <div>
+        <label for="confirmPassword" class="visually-hidden">Password</label>
+        <input class="form-control" id="confirmPassword" placeholder="Confirm password" asp-for="ConfirmPassword" />
+        <span asp-validation-for="ConfirmPassword"></span>
+    </div>
+    <div class="row align-items-center">
+        <div class="col">
+            <input class="w-100 btn btn-lg btn-primary" type="submit" value="Sign Up" />
+        </div>
+        <div class="col">
+            <a class="nav-link text-secondary" asp-controller="Identification" asp-action="Login"
+               asp-route-returnUrl="@Model.ReturnUrl">Back to Login</a>
+        </div>
+    </div>
+</form>

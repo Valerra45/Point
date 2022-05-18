@@ -1,0 +1,14 @@
+﻿{
+  "profiles": {
+    "Point.Order.WebHost": {
+      "commandName": "Project",
+      "dotnetRunMessages": "true",
+      "launchUrl": "graphql",
+      "launchBrowser": true,
+      "applicationUrl": "https://localhost:6001;http://localhost:6000",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
