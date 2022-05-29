@@ -15,5 +15,7 @@ namespace Point.Ordering.Core.Domain.Entity
         public string Address { get; set; }
 
         public string Phone { get; set; }
+
+        public virtual List<Order> Orders { get; set; }
     }
 }
